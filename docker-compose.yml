@@ -1,0 +1,5 @@
+services:
+  devops-python:
+    image: santoshmondal/devopspython:latest
+    ports:
+      - "5000:5000"
