@@ -25,7 +25,6 @@ docker build -t devopspython .
 docker run -p 5000:5000 devopspython
 
 
-
 -- whileing pushing to dockerhub
 docker login
 docker buildx create --use
