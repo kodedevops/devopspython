@@ -1,5 +1,18 @@
 # Project Setup
 
+### Reference Documentation
+
+Public Url to Test After deployment : Nodejs Port : 5000
+
+```
+http://IP_ADDRESS:PORT/python-service/first/
+http://IP_ADDRESS:PORT/python-service/first/hello
+http://IP_ADDRESS:PORT/python-service/first/health
+http://IP_ADDRESS:PORT/python-service/first/list
+http://IP_ADDRESS:PORT/python-service/first/map
+
+```
+
 ```
 python3 -m venv venv
 source venv/bin/activate
