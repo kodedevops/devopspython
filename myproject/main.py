@@ -1,4 +1,4 @@
-from flask import Blueprint, Flask, jsonify
+from flask import Blueprint, Flask, jsonify,  request
 
 app = Flask(__name__)
 first_bp = Blueprint('firstbp', __name__, url_prefix='/python-service/first')
@@ -29,6 +29,17 @@ def hello_map():
 @first_bp.route("/health", methods=['GET'])
 def health_check():
     return jsonify(message="OK")
+
+
+# POST endpoint
+@first_bp.route("/post-data", methods=['POST'])
+def post_data():
+    data = request.json  # Get JSON data from the request body
+    return jsonify({
+        "message": "Data received",
+        "receivedData": data
+    })
+
 
 # Register the blueprint in the app
 app.register_blueprint(first_bp)
